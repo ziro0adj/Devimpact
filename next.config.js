@@ -8,6 +8,7 @@ images: {
       'img.clerk.com',
       'subdomain',
       'files.stripe.com',
+      '8ahs17cko1.ufs.sh',
     ],
 },
 };
