@@ -24,13 +24,13 @@ export default function Home(){
       <br />
       <br />
       <div className="relative w-full pl-10 ml-24 ">
-        <h1 className=" text-9xl  md:text-[100px] bg-gradient-to-r from-primary to-secondary-foreground text-transparent bg-clip-text to-blue-600 ">
+        <h1 id='one' className=" text-9xl  md:text-[100px] bg-gradient-to-r from-primary to-secondary-foreground text-transparent bg-clip-text to-blue-600 ">
           StudyVerse
         </h1>
 
         <div className= 'flex'>
 
-              <p className='ml-10 font-serif font-semibold ml-5 text-balance  text-xl '> <br></br>studyverse is a collaborative study platform designed to <br></br> bring students and universities together.
+              <p  id='two' className='ml-10 font-serif font-semibold ml-5 text-balance  text-xl '> <br></br>studyverse is a collaborative study platform designed to <br></br> bring students and universities together.
 Each university creates <br></br>  its own space where admins invite students to join study groups, 
 <br></br> share resources,  and grow together.Our mission is to foster teamwork,<br></br> knowledge-sharing,
 and academic success in asupportive community.<br></br>  Join us and redefine learning through collaboration!</p>
@@ -60,7 +60,7 @@ and academic success in asupportive community.<br></br>  Join us and redefine le
           .map((card) => (
             <Card
               key={card.title}
-              className="w-full max-w-7xl flex flex-row justify-between border-2 border-primary shadow-lg"
+              id='three' className="w-full max-w-7xl flex flex-row justify-between border-2 border-primary shadow-lg"
             >
               <CardHeader className="p-8 w-1/3">
                 <CardTitle className="text-3xl font-bold">{card.title}</CardTitle>
@@ -93,7 +93,7 @@ and academic success in asupportive community.<br></br>  Join us and redefine le
       </div>
     </section>
 
-    <footer className="bg-blue-600 text-white py-8">
+    <footer id='four' className="bg-blue-600 text-white py-8">
       <div className="container mx-auto text-center">
         <h2 className="text-2xl font-bold">Contact Us</h2>
         <p className="mt-4">Email: contact@studyverse.com</p>

@@ -16,10 +16,10 @@ type Props = {
       </aside>
       <nav className="hidden md:block absolute left-[50%] top-[50%] transform translate-x-[-50%] translate-y-[-50%]">
         <ul className="flex items-center justify-center gap-8">
-          <Link href={'#'}>Home</Link>
-          <Link href={'#'}>description</Link>
-          <Link href={'#'}>Fees</Link>
-          <Link href={'#'}>Contact us</Link>
+          <Link id='home' href={'#home'}>Home</Link>
+          <Link href={'#two'}>description</Link>
+          <Link href={'#three'}>Fees</Link>
+          <Link href={'#four'}>Contact us</Link>
         </ul>
       </nav>
       
