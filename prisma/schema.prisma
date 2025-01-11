@@ -107,7 +107,7 @@ model SubAccount {
   id               String                    @id @default(uuid())
   connectAccountId String?                   @default("")
   name             String
-  subAccountLogo   String                    @db.Text
+  
   createdAt        DateTime                  @default(now())
   updatedAt        DateTime                  @updatedAt
   companyEmail     String                    @db.Text

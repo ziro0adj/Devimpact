@@ -263,7 +263,7 @@ const AgencyDetails = ({ data }: Props) => {
                   name="companyEmail"
                   render={({ field }) => (
                     <FormItem className="flex-1">
-                      <FormLabel>Agency Email</FormLabel>
+                      <FormLabel>university Email</FormLabel>
                       <FormControl>
                         <Input
                           readOnly

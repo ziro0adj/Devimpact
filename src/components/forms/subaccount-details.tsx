@@ -39,7 +39,7 @@ const formSchema = z.object({
   companyPhone: z.string().min(1),
   address: z.string(),
   city: z.string(),
-  subAccountLogo: z.string(),
+  
   zipCode: z.string(),
   state: z.string(),
   country: z.string(),
@@ -77,7 +77,7 @@ const SubAccountDetails: React.FC<SubAccountDetailsProps> = ({
       zipCode: details?.zipCode,
       state: details?.state,
       country: details?.country,
-      subAccountLogo: details?.subAccountLogo,
+      
     },
   })
 
@@ -86,7 +86,7 @@ const SubAccountDetails: React.FC<SubAccountDetailsProps> = ({
       const response = await upsertSubAccount({
         id: details?.id ? details.id : v4(),
         address: values.address,
-        subAccountLogo: values.subAccountLogo,
+      
         city: values.city,
         companyPhone: values.companyPhone,
         country: values.country,
@@ -143,24 +143,7 @@ const SubAccountDetails: React.FC<SubAccountDetailsProps> = ({
             onSubmit={form.handleSubmit(onSubmit)}
             className="space-y-4"
           >
-            <FormField
-              disabled={isLoading}
-              control={form.control}
-              name="subAccountLogo"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Account Logo</FormLabel>
-                  <FormControl>
-                    <FileUpload
-                      apiEndpoint="subaccountLogo"
-                      value={field.value}
-                      onChange={field.onChange}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+            
             <div className="flex md:flex-row gap-4">
               <FormField
                 disabled={isLoading}
