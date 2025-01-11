@@ -29,7 +29,6 @@ import { useRouter } from 'next/navigation'
 import React, { Dispatch, SetStateAction, useMemo } from 'react'
 import PipelineTicket from './pipeline-ticket'
 import CustomModal from '@/components/global/custom-modal'
-import PipelineTicket from './pipeline-ticket'
 import TicketForm from '@/components/forms/ticket-form'
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
 import { DragDropContext, DropResult, Droppable,Draggable } from 'react-beautiful-dnd'
@@ -79,8 +78,8 @@ const PipelineLane: React.FC<PipelaneLaneProps> = ({
   const handleCreateTicket = () => {
     setOpen(
       <CustomModal
-        title="Create A Ticket"
-        subheading="Tickets are a great way to keep track of tasks"
+        title="Create A session"
+        subheading=""
       >
         <TicketForm
           getNewTicket={addNewTicket}
@@ -165,9 +164,7 @@ const PipelineLane: React.FC<PipelaneLaneProps> = ({
                         </span>
                       </div>
                       <div className="flex items-center flex-row">
-                        <Badge className="bg-white text-black">
-                          {amt.format(laneAmt)}
-                        </Badge>
+                      
                         <DropdownMenuTrigger>
                           <MoreVertical className="text-muted-foreground
                            cursor-pointer" />
@@ -226,7 +223,7 @@ const PipelineLane: React.FC<PipelaneLaneProps> = ({
                       onClick={handleCreateTicket}
                     >
                       <PlusCircleIcon size={15} />
-                      Create Ticket
+                      Create a session
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </div>

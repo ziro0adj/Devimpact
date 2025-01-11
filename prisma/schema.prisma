@@ -181,7 +181,7 @@ model Ticket {
   laneId      String
   order       Int      @default(0)
   Lane        Lane     @relation(fields: [laneId], references: [id], onDelete: Cascade)
-  value       Decimal?
+  value       Float?
   description String?
   Tags        Tag[]
 
@@ -430,4 +430,13 @@ model AddOns {
   Agency    Agency?  @relation(fields: [agencyId], references: [id])
 
   @@index([agencyId])
+}
+model messages {
+  id           String         @id @default(uuid())
+  funnelID     String         
+  userID       String         
+  message      String         
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+
 }

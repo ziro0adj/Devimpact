@@ -210,10 +210,10 @@ const AgencyDetails = ({ data }: Props) => {
     <AlertDialog>
       <Card className="w-full">
         <CardHeader>
-          <CardTitle>Agency Information</CardTitle>
+          <CardTitle>University Information</CardTitle>
           <CardDescription>
-            Lets create an agency for you business. You can edit agency settings
-            later from the agency settings tab.
+            Lets create an University for you business. You can edit University settings
+            later from the University settings tab.
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -228,7 +228,7 @@ const AgencyDetails = ({ data }: Props) => {
                 name="agencyLogo"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Agency Logo</FormLabel>
+                    <FormLabel>University Logo</FormLabel>
                     <FormControl>
                       <FileUpload
                         apiEndpoint="agencyLogo"
@@ -247,10 +247,10 @@ const AgencyDetails = ({ data }: Props) => {
                   name="name"
                   render={({ field }) => (
                     <FormItem className="flex-1">
-                      <FormLabel>Agency Name</FormLabel>
+                      <FormLabel>University Name</FormLabel>
                       <FormControl>
                         <Input
-                          placeholder="Your agency name"
+                          placeholder="Your university name"
                           {...field}
                         />
                       </FormControl>
@@ -263,7 +263,7 @@ const AgencyDetails = ({ data }: Props) => {
                   name="companyEmail"
                   render={({ field }) => (
                     <FormItem className="flex-1">
-                      <FormLabel>university Email</FormLabel>
+                      <FormLabel>University Email</FormLabel>
                       <FormControl>
                         <Input
                           readOnly
@@ -283,7 +283,7 @@ const AgencyDetails = ({ data }: Props) => {
                   name="companyPhone"
                   render={({ field }) => (
                     <FormItem className="flex-1">
-                      <FormLabel>Agency Phone Number</FormLabel>
+                      <FormLabel>University Phone Number</FormLabel>
                       <FormControl>
                         <Input
                           placeholder="Phone"
@@ -304,7 +304,7 @@ const AgencyDetails = ({ data }: Props) => {
                   return (
                     <FormItem className="flex flex-row items-center justify-between rounded-lg border gap-4 p-4">
                       <div>
-                        <FormLabel>Whitelabel Agency</FormLabel>
+                        <FormLabel>Whitelabel University</FormLabel>
                         <FormDescription>
                           Turning on whilelabel mode will show your agency logo
                           to all sub accounts by default. You can overwrite this
@@ -380,7 +380,7 @@ const AgencyDetails = ({ data }: Props) => {
                   name="zipCode"
                   render={({ field }) => (
                     <FormItem className="flex-1">
-                      <FormLabel>Zipcpde</FormLabel>
+                      <FormLabel>Zipcode</FormLabel>
                       <FormControl>
                         <Input
                           placeholder="Zipcode"
@@ -413,7 +413,7 @@ const AgencyDetails = ({ data }: Props) => {
                 <div className="flex flex-col gap-2">
                   <FormLabel>Create A Goal</FormLabel>
                   <FormDescription>
-                    ✨ Create a goal for your agency. As your business grows
+                    ✨ Create a goal for your University. As your university grows
                     your goals grow too so dont forget to set the bar higher!
                   </FormDescription>
                   <NumberInput
@@ -438,7 +438,7 @@ const AgencyDetails = ({ data }: Props) => {
                 type="submit"
                 disabled={isLoading}
               >
-                {isLoading ? <Loading /> : 'Save Agency Information'}
+                {isLoading ? <Loading /> : 'Save University Information'}
               </Button>
             </form>
           </Form>
@@ -449,15 +449,14 @@ const AgencyDetails = ({ data }: Props) => {
                 <div>Danger Zone</div>
               </div>
               <div className="text-muted-foreground">
-                Deleting your agency cannpt be undone. This will also delete all
-                sub accounts and all data related to your sub accounts. Sub
-                accounts will no longer have access to funnels, contacts etc.
+                Deleting your university cannpt be undone. This will also delete all
+                classes and all data related to your classes.
               </div>
               <AlertDialogTrigger
                 disabled={isLoading || deletingAgency}
                 className="text-red-600 p-2 text-center mt-2 rounded-md hove:bg-red-600 hover:text-white whitespace-nowrap"
               >
-                {deletingAgency ? 'Deleting...' : 'Delete Agency'}
+                {deletingAgency ? 'Deleting...' : 'Delete University account'}
               </AlertDialogTrigger>
             </div>
           )}
@@ -468,7 +467,7 @@ const AgencyDetails = ({ data }: Props) => {
               </AlertDialogTitle>
               <AlertDialogDescription className="text-left">
                 This action cannot be undone. This will permanently delete the
-                Agency account and all related sub accounts.
+                University account and all related classes.
               </AlertDialogDescription>
             </AlertDialogHeader>
             <AlertDialogFooter className="flex items-center">

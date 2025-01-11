@@ -59,7 +59,7 @@ const ContactForm = ({ apiCall, subTitle, title }: Props) => {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Name</FormLabel>
+                  <FormLabel>Teacher Name</FormLabel>
                   <FormControl>
                     <Input
                       placeholder="Name"
@@ -76,7 +76,7 @@ const ContactForm = ({ apiCall, subTitle, title }: Props) => {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel>Teacher Email</FormLabel>
                   <FormControl>
                     <Input
                       type="email"
@@ -88,6 +88,7 @@ const ContactForm = ({ apiCall, subTitle, title }: Props) => {
                 </FormItem>
               )}
             />
+            
             <Button
               className="mt-4"
               disabled={isLoading}

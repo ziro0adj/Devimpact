@@ -70,7 +70,7 @@ const UploadMediaForm = ({ subaccountId }: Props) => {
   return (
     <Card className="w-full">
       <CardHeader>
-        <CardTitle>Media Information</CardTitle>
+        <CardTitle>Shared Information</CardTitle>
         <CardDescription>
           Please enter the details for your file
         </CardDescription>
@@ -86,7 +86,7 @@ const UploadMediaForm = ({ subaccountId }: Props) => {
                   <FormLabel>File Name</FormLabel>
                   <FormControl>
                     <Input
-                      placeholder="Your agency name"
+                      placeholder="File name"
                       {...field}
                     />
                   </FormControl>
@@ -100,7 +100,7 @@ const UploadMediaForm = ({ subaccountId }: Props) => {
               name="link"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Media File</FormLabel>
+                  <FormLabel>File</FormLabel>
                   <FormControl>
                     <FileUpload
                       apiEndpoint="subaccountLogo"
@@ -116,7 +116,7 @@ const UploadMediaForm = ({ subaccountId }: Props) => {
               type="submit"
               className="mt-4"
             >
-              Upload Media
+              Upload file
             </Button>
           </form>
         </Form>
