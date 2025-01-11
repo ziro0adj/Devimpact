@@ -11,7 +11,7 @@ import { Toaster as SonnarToaster } from '@/components/ui/sonner'
 const font = DM_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Web up',
+  title: 'studyverse',
   description: 'All in one',
 }
 
