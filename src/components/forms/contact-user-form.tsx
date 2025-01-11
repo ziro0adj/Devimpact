@@ -84,11 +84,7 @@ const ContactUserForm: React.FC<ContactUserFormProps> = ({ subaccountId }) => {
   return (
     <Card className=" w-full">
       <CardHeader>
-        <CardTitle>Contact Info</CardTitle>
-        <CardDescription>
-          You can assign tickets to contacts and set a value for each contact in
-          the ticket.
-        </CardDescription>
+        <CardTitle>Teacher Info</CardTitle>
       </CardHeader>
       <CardContent>
         <Form {...form}>
@@ -102,7 +98,7 @@ const ContactUserForm: React.FC<ContactUserFormProps> = ({ subaccountId }) => {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Name</FormLabel>
+                  <FormLabel>Teacher Name</FormLabel>
                   <FormControl>
                     <Input
                       placeholder="Name"
@@ -119,7 +115,7 @@ const ContactUserForm: React.FC<ContactUserFormProps> = ({ subaccountId }) => {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel>Teacher Email</FormLabel>
                   <FormControl>
                     <Input
                       type="email"
@@ -140,7 +136,7 @@ const ContactUserForm: React.FC<ContactUserFormProps> = ({ subaccountId }) => {
               {form.formState.isSubmitting ? (
                 <Loading />
               ) : (
-                'Save Contact Details!'
+                'Save Teacher Details!'
               )}
             </Button>
           </form>

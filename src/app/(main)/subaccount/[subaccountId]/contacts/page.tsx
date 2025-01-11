@@ -72,19 +72,17 @@ const ContactPage = async ({ params }: Props) => {
             <TableHead className="w-[300px]">Email</TableHead>
             <TableHead className="w-[200px]">Active</TableHead>
             <TableHead>Created Date</TableHead>
-            <TableHead className="text-right">Total Value</TableHead>
+          
           </TableRow>
         </TableHeader>
         <TableBody className="font-medium truncate">
           {allContacts.map((contact) => (
             <TableRow key={contact.id}>
               <TableCell>
-                <Avatar>
-                  <AvatarImage alt="@shadcn" />
-                  <AvatarFallback className="bg-primary text-white">
-                    {contact.name.slice(0, 2).toUpperCase()}
-                  </AvatarFallback>
-                </Avatar>
+                
+                  
+                    {contact.name}
+                
               </TableCell>
               <TableCell>{contact.email}</TableCell>
               <TableCell>
@@ -95,9 +93,7 @@ const ContactPage = async ({ params }: Props) => {
                 )}
               </TableCell>
               <TableCell>{format(contact.createdAt, 'MM/dd/yyyy')}</TableCell>
-              <TableCell className="text-right">
-                {formatTotal(contact.Ticket)}
-              </TableCell>
+            
             </TableRow>
           ))}
         </TableBody>

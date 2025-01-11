@@ -163,10 +163,10 @@ const TicketForm = ({ getNewTicket, laneId, subaccountId }: Props) => {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Ticket Name</FormLabel>
+                  <FormLabel>Session Name</FormLabel>
                   <FormControl>
                     <Input
-                      placeholder="name"
+                      placeholder="Session name"
                       {...field}
                     />
                   </FormControl>
@@ -200,7 +200,7 @@ const TicketForm = ({ getNewTicket, laneId, subaccountId }: Props) => {
                   <FormLabel>Ticket Value</FormLabel>
                   <FormControl>
                     <Input
-                      placeholder="Value"
+                      placeholder="enter time"
                       {...field}
                     />
                   </FormControl>
